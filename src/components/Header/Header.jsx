@@ -8,10 +8,13 @@ function Header() {
       <div className={styles.container}>
         <div className={styles.brand}>
           <h1 className={styles.logo}>React Blog</h1>
-          <span className={styles.counter}>Статей: {articles.length}</span>
+          <p className={styles.tagline}>
+            Домашняя страничка начинающего веб-мастера
+          </p>
         </div>
-        <Nav />
+        <span className={styles.counter}>Статей: {articles.length}</span>
       </div>
+      <Nav />
     </header>
   )
 }
