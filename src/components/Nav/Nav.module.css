@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.link:hover {
+  border-bottom-color: #fff;
+}

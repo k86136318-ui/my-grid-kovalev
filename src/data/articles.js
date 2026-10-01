@@ -59,6 +59,26 @@ export const articles = [
     tag: 'Инструменты',
     image: 'https://picsum.photos/seed/vite/400/250',
   },
+  {
+    id: 7,
+    title: 'Условный рендеринг: &&, тернарник и ранний return',
+    excerpt:
+      'Три способа показать разметку по условию. Разбираем, почему && иногда выводит на экран неожиданный ноль.',
+    author: 'Ольга Белова',
+    date: '1 октября 2026',
+    tag: 'Основы',
+    image: 'https://picsum.photos/seed/condrender/400/250',
+  },
+  {
+    id: 8,
+    title: 'Семантическая вёрстка и доступность',
+    excerpt:
+      'Почему header, nav, main и article лучше бесконечных div: скринридеры, SEO и читаемость кода.',
+    author: 'Сергей Мальцев',
+    date: '2 октября 2026',
+    tag: 'Вёрстка',
+    image: 'https://picsum.photos/seed/semantics/400/250',
+  },
 ]
 
 export default articles
