@@ -1,16 +1,50 @@
-# React + Vite
+# Лабораторная работа №1 — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Блог-страница со списком статей: семантическая разметка, переиспользуемые
+JSX-компоненты, CSS-модули и данные, вынесенные в отдельный файл.
+Оформление — в стиле блогов 2000-х: Verdana, рамки, жёсткие тени.
 
-Currently, two official plugins are available:
+## Запуск
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```
+npm install
+npm run dev
+```
 
-## React Compiler
+Откроется http://127.0.0.1:5173/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Структура
 
-## Expanding the ESLint configuration
+```
+src/
+├── main.jsx                  точка входа
+├── App.jsx                   сборка страницы
+├── App.module.css
+├── index.css                 глобальные стили и переменные
+├── data/
+│   └── articles.js           массив статей
+└── components/
+    ├── Header/               шапка сайта
+    ├── Nav/                  навигация
+    ├── ArticleCard/          карточка одной статьи
+    └── ArticleList/          сетка карточек (flexbox, 4 в ряд)
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Каждый компонент лежит в своей папке вместе со своим `*.module.css` —
+классы изолированы, имена не конфликтуют между компонентами.
+
+## Что сделано
+
+- Проект на Vite + React (JavaScript), шаблон очищен от демо-кода
+- Семантические теги: `header`, `nav`, `main`, `article`, `footer`
+- Данные карточек — в `src/data/articles.js`, список рендерится через `.map()`
+  с `key`, поэтому количество карточек задаётся только длиной массива
+- Сетка карточек на flexbox, по 4 в ряд
+- Счётчик статей
+- Навигация вынесена в отдельный компонент `Nav`
+
+## Документы
+
+- [LAB1-ЗАДАНИЕ.md](LAB1-ЗАДАНИЕ.md) — условие работы
+- [ОТВЕТЫ.md](ОТВЕТЫ.md) — разделы 6 и 7: задания для самопроверки
+  и ответы на контрольные вопросы
